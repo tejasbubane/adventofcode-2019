@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [adventofcode-2019.day1 :refer :all]))
 
+;; part 1
 (deftest test-fuel
   (testing "12" (is (= (fuel 12) 2)))
   (testing "14" (is (= (fuel 14) 2)))
@@ -17,3 +18,18 @@
 (deftest test-input
   (testing "puzzle input"
     (is (= (apply total-fuel puzzle-input) 3239890))))
+
+;; part 2
+(deftest test-fuel-of-fuel
+  (testing "14" (is (= (fuel-of-fuel 14) 2)))
+  (testing "1969" (is (= (fuel-of-fuel 1969) 966)))
+  (testing "100756"(is (= (fuel-of-fuel 100756) 50346))))
+
+(deftest test-total-fuel-of-fuel
+  (testing "all-given-examples"
+    (is (= (total-fuel-of-fuel 14 1969 100756)
+           (+ 2 966 50346)))))
+
+(deftest part-2-input
+  (testing "puzzle input"
+    (is (= (apply total-fuel-of-fuel puzzle-input) 4856963))))
