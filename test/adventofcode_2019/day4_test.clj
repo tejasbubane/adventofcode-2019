@@ -19,6 +19,11 @@
   (time (testing "with puzzle input - part 1"
           (is (= (count (possible-passwords 134564 585159)) 1929)))))
 
+(deftest test-not-part-of-larger-group
+  (testing "1 1 2 2 3 3" (is (not-part-of-larger-group (pairs '(1 1 2 2 3 3)))))
+  (testing "1 2 3 4 4 4" (is (not (not-part-of-larger-group (pairs '(1 2 3 4 4 4))))))
+  (testing "1 1 1 1 2 2" (is (not-part-of-larger-group (pairs '(1 1 1 1 2 2))))))
+
 (deftest test-puzzle-input
   (print "Part 2: ")
   (time (testing "with puzzle input - part 2"
