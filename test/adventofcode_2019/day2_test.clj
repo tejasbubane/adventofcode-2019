@@ -10,9 +10,11 @@
 (deftest test-instruction
   (testing "example-input"
     (is (= (execute test-input 9 10) 3500)))
-  (testing "puzzle-input"
-    (is (= (execute puzzle-input 12 2) 8017076))))
+  (print "Part 1: ")
+  (time (testing "puzzle-input"
+          (is (= (execute puzzle-input 12 2) 8017076)))))
 
 (deftest test-find-pair
-  (testing "puzzle-input"
-    (is (= (find-pair puzzle-input) 3146))))
+  (print "Part 2: ")
+  (time (testing "puzzle-input"
+          (is (= (find-pair puzzle-input) 3146)))))

@@ -15,5 +15,6 @@
   (testing "1 3 8 9" (is (non-decreasing '(1 3 8 9)))))
 
 (deftest test-puzzle-input
-  (testing "with puzzle input"
-    (is (= (count (possible-passwords 134564 585159)) 1929))))
+  (print "Part 1: ")
+  (time (testing "with puzzle input"
+          (is (= (count (possible-passwords 134564 585159)) 1929)))))
