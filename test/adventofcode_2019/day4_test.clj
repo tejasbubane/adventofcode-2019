@@ -16,5 +16,10 @@
 
 (deftest test-puzzle-input
   (print "Part 1: ")
-  (time (testing "with puzzle input"
+  (time (testing "with puzzle input - part 1"
           (is (= (count (possible-passwords 134564 585159)) 1929)))))
+
+(deftest test-puzzle-input
+  (print "Part 2: ")
+  (time (testing "with puzzle input - part 2"
+          (is (= (count (possible-passwords-2 134564 585159)) 1306)))))
